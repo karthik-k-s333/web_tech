@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #18064deb;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(9, 125, 179, 0.807);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #242021;
+        }
+        .plan {
+            display: inline-block;
+            width: 30%;
+            padding: 20px;
+            margin: 10px;
+            background: #0000CD;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .plan h3 {
+            color: #FF6F61;
+        }
+        .plan p {
+            font-size: 18px;
+        }
+        .plan button {
+            padding: 10px 20px;
+            background-color: #CC7A8B;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .plan button:hover {
+            background-color: #ff5a6e;
+        }
+        .back-link {
+            margin-top: 30px;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Choose Your Subscription Plan</h2>
+        <div class="plan">
+            <h3>Basic Plan</h3>
+            <p>✔ 720p Streaming<br>✔ Ads Included<br>₹199/month</p>
+            <button onclick="alert('Thank you for choosing the Basic Plan!')">Subscribe</button>
+        </div>
+        <div class="plan">
+            <h3>Premium Plan</h3>
+            <p>✔ 1080p & 4K Streaming<br>✔ No Ads<br>✔ Download Available<br>₹499/month</p>
+            <button onclick="alert('Thank you for choosing the Premium Plan!')">Subscribe</button>
+        </div>
+        <div class="plan">
+            <h3>Ultimate Plan</h3>
+            <p>✔ 4K Streaming<br>✔ No Ads<br>✔ Download & Offline Mode<br>✔ Exclusive Content<br>₹999/month</p>
+            <button onclick="alert('Thank you for choosing the Ultimate Plan!')">Subscribe</button>
+        </div>
+
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>

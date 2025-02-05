@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #CC7A8B;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .login-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #CC7A8B;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .login-btn:hover {
+            background: #ff5a6e;
+        }
+        .back-link {
+            display: block;
+            margin-top: 15px;
+            color: white;
+            text-decoration: none;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <a href="signup.html" class="back-link">Don't have an account? Sign Up</a>
+        <a href="index.html" class="back-link">Back to Home</a>
+        <div id="error-message" class="error-message"></div> <!-- For showing error message -->
+    </div>
+
+    <script>
+        // Sample users data for demo
+        const users = [
+            { email: "user@example.com", password: "password123" },
+            { email: "admin@example.com", password: "admin123" }
+        ];
+
+        // Handle login logic
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submit action
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            let isAuthenticated = false;
+
+            // Check if email and password match any user
+            for (const user of users) {
+                if (user.email === email && user.password === password) {
+                    isAuthenticated = true;
+                    break;
+                }
+            }
+
+            // Handle success or failure
+            const errorMessageDiv = document.getElementById("error-message");
+            if (isAuthenticated) {
+                alert("Login Successful! Redirecting to Home...");
+                window.location.href = "index.html"; // Redirect to homepage after login
+            } else {
+                errorMessageDiv.textContent = "Invalid email or password. Please try again.";
+            }
+        });
+    </script>
+</body>
+</html>

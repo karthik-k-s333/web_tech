@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Watch Online</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            background: url('bg4k.jpg') no-repeat center/cover;
+        }
+        .navbar {
+            background-color: #222;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .til {
+            color: 	#4169E1;
+        }
+        .anime-card img {
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .description {
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #subscription {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+        }
+        #subscription button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #CC7A8B;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Anime Fantasy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="details.html">Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="subscribe.html">Subscription</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search anime..." aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center my-4"><marquee>WELCOME TO ANIME FANTASY</marquee></h1>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 position-relative">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-2"><div class="anime-card"><img src="luffy2.jpeg" alt="One Piece"><h3 class="til text-center">ONE PIECE</h3></div></div>
+                                <div class="col-md-2"><div class="anime-card"><img src="narutoweb1.jpg" alt="Naruto"><h3 class="til text-center">NARUTO</h3></div></div>
+                                <div class="col-md-2"><div class="anime-card"><img src="ichigoweb1.jpg" alt="Bleach"><h3 class="til text-center">BLEACH</h3></div></div>
+                                <div class="col-md-2"><div class="anime-card"><img src="gokuweb1.webp" alt="Dragon Ball"><h3 class="til text-center">DRAGON BALL</h3></div></div>
+                                <div class="col-md-2"><div class="anime-card"><img src="aot1.jpg" alt="Attack on Titan"><h3 class="til text-center">ATTACK ON TITAN</h3></div></div>
+                                <div class="col-md-2"><div class="anime-card"><img src="berserk1.png" alt="Berserk"><h3 class="til text-center">BERSERK</h3></div></div>
+                                
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-2"><div class="anime-card"><img src="monster1.jpg" alt="Monster"><h3 class="til text-center">MONSTER</h3></div></div>
+                                <div class="col-md-2"><div class="anime-card"><img src="deathnote1.jpg" alt="Death Note"><h3 class="til text-center">DEATH NOTE</h3></div></div>
+                                <div class="col-md-2"><div class="anime-card"><img src="bluelock1.jpg" alt="Blue Lock"><h3 class="til text-center">BLUE LOCK</h3></div></div>
+                                <div class="col-md-2"><div class="anime-card"><img src="haikyuu1.jpg" alt="Haikyuu"><h3 class="til text-center">HAIKYUU</h3></div></div>
+                                <div class="col-md-2"><div class="anime-card"><img src="cote1.jpg" alt="Monster"><h3 class="til text-center">CLASSROOM OF THE ELITE</h3></div></div>
+                                <div class="col-md-2"><div class="anime-card"><img src="kuroko1.webp" alt="Monster"><h3 class="til text-center">KUROKO'S BASKETBALL</h3></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="description container my-4" style="color: #111;">
+        <p>Explore the latest and most popular anime series. From action-packed adventures to heartwarming stories.</p>
+        <h3>Enjoy high-quality streaming of new animes. Find your next favorite anime here.</h3>
+    </div>
+
+    <div id="subscription" class="container-fluid">
+        <h2>Subscribe for Unlimited Access</h2>
+        <p>Enjoy unlimited anime streaming with high-quality resolution.</p>
+        <a href="subscription.html"><button>Subscribe Now</button></a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

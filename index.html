@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Watch Online</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+            background: url('bg4k.jpg') no-repeat center/cover;
+        }
+        .navbar {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .search-bar {
+            margin-left: 20px;
+        }
+        .search-bar input {
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        .slider-container {
+            width: 90%;
+            max-width: 1200px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .anime-grid {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: max-content;
+        }
+        .anime-card {
+            flex: 0 0 auto;
+            margin: 0 10px;
+            text-align: center;
+        }
+        .anime-card img {
+            height: 400px;
+            width: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .til {
+            color: #CC7A8B;
+        }
+        .arrow-button {
+            position: absolute;
+            top: 50%;
+            font-size: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        .navbar a:hover {
+            opacity: 0.8;
+        }
+        .description {
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #subscription {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+        }
+        #subscription button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #CC7A8B;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="details.html">Details</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="subscribe.html">Subscription</a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search anime...">
+        </div>
+    </div>
+    
+    <h1><marquee>WELCOME TO ANIME FANTASY</marquee></h1>
+    
+    <div class="slider-container">
+        <button class="arrow-button arrow-left" onclick="moveImages('left')">&lt;</button>
+        <div class="anime-grid" id="animeGrid">
+            <div class="anime-card"><img src="luffy2.jpeg" alt="One Piece"><h3 class="til">ONE PIECE</h3></div>
+            <div class="anime-card"><img src="narutoweb1.jpg" alt="Naruto"><h3 class="til">NARUTO</h3></div>
+            <div class="anime-card"><img src="ichigoweb1.jpg" alt="Bleach"><h3 class="til">BLEACH</h3></div>
+            <div class="anime-card"><img src="gokuweb1.webp" alt="Dragon Ball"><h3 class="til">DRAGON BALL</h3></div>
+            <div class="anime-card"><img src="aot1.jpg" alt="Attack on Titan"><h3 class="til">ATTACK ON TITAN</h3></div>
+            <div class="anime-card"><img src="berserk1.png" alt="Berserk"><h3 class="til">BERSERK</h3></div>
+            <div class="anime-card"><img src="monster1.jpg" alt="Monster"><h3 class="til">MONSTER</h3></div>
+            <div class="anime-card"><img src="deathnote1.jpg" alt="Death Note"><h3 class="til">DEATH NOTE</h3></div>
+            <div class="anime-card"><img src="bluelock1.jpg" alt="Blue Lock"><h3 class="til">BLUE LOCK</h3></div>
+            <div class="anime-card"><img src="haikyuu1.jpg" alt="Haikyuu"><h3 class="til">HAIKYUU</h3></div>
+        </div>
+        <button class="arrow-button arrow-right" onclick="moveImages('right')">&gt;</button>
+    </div>
+    
+    <div class="description" style="color: #111;">
+        <p>Explore the latest and most popular anime series. From action-packed adventures to heartwarming stories.</p>
+        <h3>Enjoy high-quality streaming of new animes. Find your next favorite anime here.</h3>
+    </div>
+
+    <div id="subscription">
+        <h2>Subscribe for Unlimited Access</h2>
+        <p>Enjoy unlimited anime streaming with high-quality resolution.</p>
+        <a href="subscription.html"><button>Subscribe Now</button></a>
+    </div>
+/*
+    <script>
+        let currentIndex = 0;
+        const grid = document.getElementById("animeGrid");
+        const imageWidth = grid.children[0].offsetWidth + 20; // Image width + margin
+        const sliderContainer = document.querySelector(".slider-container");
+        const visibleImages = Math.floor(sliderContainer.offsetWidth / imageWidth);
+        const totalImages = grid.children.length;
+        const maxIndex = totalImages - visibleImages;
+
+        function moveImages(direction) {
+            if (direction === "left" && currentIndex > 0) {
+                currentIndex--;
+            } else if (direction === "right" && currentIndex < maxIndex) {
+                currentIndex++;
+            }
+            grid.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
+        }
+
+        // Update visible images on window resize
+        window.addEventListener("resize", () => {
+            const newVisibleImages = Math.floor(sliderContainer.offsetWidth / imageWidth);
+            currentIndex = Math.min(currentIndex, totalImages - newVisibleImages);
+            grid.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
+        });
+    </script>
+    */
+</body>
+</html>
